@@ -1,0 +1,64 @@
+:root {
+  --scale: 1px;
+  --window-height: calc(322 * var(--scale));
+  --window-width: calc(232 * var(--scale));
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  user-select: none;
+  -ms-user-select: none;
+  font-family: Helvetica;
+  box-sizing: border-box;
+  background-color: black;
+  -webkit-user-select: none;
+}
+
+table {
+  table-layout: fixed;
+  width: var(--window-width);
+}
+
+table,
+td,
+tr {
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+td {
+  text-align: center;
+  width: 10px !important;
+  font-size: calc(20 * var(--scale));
+  background-color: rgba(105, 103, 103);
+  height: calc(var(--window-height) / 7);
+}
+
+tr:nth-child(2) td {
+  background-color: rgba(81, 76, 79);
+}
+
+tr td:last-child {
+  background-color: rgba(261, 159, 13);
+}
+
+tr:last-child td {
+  height: calc(var(--window-height) / 7) !important;
+}
+
+#display {
+  font-weight: 100;
+  text-align: right;
+  padding-right: 15px;
+  vertical-align: bottom;
+  font-size: calc(var(--scale) * 56);
+  background-color: rgba(48, 45, 45);
+  height: calc(var(--window-height) / 4.3);
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
